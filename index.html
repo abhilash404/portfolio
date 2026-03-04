@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Abhilash Praharaj</title>
+
+<link rel="stylesheet" href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css"/>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0;font-family:Arial,Helvetica,sans-serif}
+body{background:#0b0b0f;color:#e6e6e6;overflow-x:hidden}
+canvas{position:fixed;top:0;left:0;z-index:-1}
+.container{max-width:1000px;margin:auto;padding:40px 20px}
+.hero{min-height:80vh;display:flex;flex-direction:column;justify-content:center}
+h1{font-size:48px;margin-bottom:10px}
+.subtitle{font-size:20px;color:#8f8f9a;margin-bottom:15px}
+.tagline{font-size:18px;margin-bottom:30px}
+.buttons a{display:inline-block;margin-right:15px;padding:10px 20px;border-radius:6px;text-decoration:none;background:#ffffff10;color:white;border:1px solid #ffffff20}
+section{margin-top:80px}
+section h2{font-size:28px;margin-bottom:20px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.card{background:#14141c;border:1px solid #2a2a35;padding:20px;border-radius:10px;transition:.3s}
+.card:hover{transform:translateY(-5px);border-color:#444}
+.skills span{display:inline-block;margin:5px;padding:6px 10px;background:#1d1d26;border-radius:6px;font-size:14px}
+footer{margin-top:80px;padding:30px;text-align:center;color:#777}
+.profile{width:120px;height:120px;border-radius:50%;object-fit:cover;margin-bottom:20px}
+
+.github-calendar{
+background:#14141c;
+padding:20px;
+border-radius:10px;
+border:1px solid #2a2a35;
+}
+</style>
+</head>
+
+<body>
+
+<canvas id="bg"></canvas>
+
+<div class="container hero">
+<img src="ok.jpeg" alt="Profile Picture" class="profile" />
+<h1>Abhilash Praharaj</h1>
+<div class="subtitle">Token Wrangler | Backend & LLM Engineer</div>
+<div class="tagline">Let's get this code running.</div>
+<div class="buttons">
+<a href="#projects">Projects</a>
+<a href="#skills">Skills</a>
+<a href="#github">GitHub</a>
+<a href="#contact">Contact</a>
+</div>
+</div>
+
+<div class="container">
+
+<section id="about">
+<h2>About</h2>
+<p>
+B.Tech student at Silicon University and BS in Data Science student at IIT Madras. I focus on backend systems and modern AI tooling, particularly large language models, LangChain, and scalable API architectures. I enjoy building practical systems that combine software engineering with intelligent automation.
+</p>
+</section>
+
+<section id="projects">
+<h2>Projects</h2>
+<div class="grid">
+
+<div class="card">
+<h3>Nota – Intelligent File Deduplicator</h3>
+<p>Rust CLI tool for detecting duplicate files with multithreaded scanning, quarantine-based deletion, and JSON reporting.</p>
+</div>
+
+<div class="card">
+<h3>Park With Us</h3>
+<p>Parking management system with role-based dashboards, Redis caching, and Celery background tasks.</p>
+</div>
+
+<div class="card">
+<h3>Crabby Interpreter</h3>
+<p>Lightweight programming language interpreter written in Rust implementing tokenization, parsing, and execution.</p>
+</div>
+
+<div class="card">
+<h3>Placement Portal</h3>
+<p>Role-based recruitment platform for institutes, companies, and students with async jobs and analytics.</p>
+</div>
+
+<div class="card">
+<h3>LLM Code Deployment</h3>
+<p>Automated system that generates applications with LLMs, deploys to GitHub Pages, and evaluates results.</p>
+</div>
+
+<div class="card">
+<h3>LLM Analysis Quiz Solver</h3>
+<p>Agent capable of scraping, processing data, and solving analysis tasks automatically using LLM pipelines.</p>
+</div>
+
+</div>
+</section>
+
+<section id="skills">
+<h2>Skills</h2>
+<div class="skills">
+<span>Python</span>
+<span>Rust</span>
+<span>Flask</span>
+<span>FastAPI</span>
+<span>Axum</span>
+<span>PyTorch</span>
+<span>TensorFlow</span>
+<span>Scikit-learn</span>
+<span>LangChain</span>
+<span>LangGraph</span>
+<span>HTML</span>
+<span>CSS</span>
+<span>JavaScript</span>
+</div>
+</section>
+
+<section id="github">
+<h2>GitHub Activity</h2>
+<div class="github-calendar">
+Loading GitHub activity...
+</div>
+</section>
+
+<section id="contact">
+<h2>Contact</h2>
+<p>Email: abhilashpraharaj122@gmail.com</p>
+<p>GitHub: https://github.com/abhilash404</p>
+</section>
+
+</div>
+
+<footer>
+© 2026 Abhilash Praharaj
+</footer>
+
+<script src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"></script>
+
+<script>
+GitHubCalendar(".github-calendar", "abhilash404", {
+responsive: true
+});
+</script>
+
+<script>
+const canvas=document.getElementById("bg")
+const ctx=canvas.getContext("2d")
+canvas.width=window.innerWidth
+canvas.height=window.innerHeight
+
+let particles=[]
+
+for(let i=0;i<80;i++){
+particles.push({
+x:Math.random()*canvas.width,
+y:Math.random()*canvas.height,
+vx:(Math.random()-0.5)*0.5,
+vy:(Math.random()-0.5)*0.5
+})}
+
+function draw(){
+ctx.clearRect(0,0,canvas.width,canvas.height)
+
+particles.forEach(p=>{
+p.x+=p.vx
+p.y+=p.vy
+
+if(p.x<0||p.x>canvas.width)p.vx*=-1
+if(p.y<0||p.y>canvas.height)p.vy*=-1
+
+ctx.beginPath()
+ctx.arc(p.x,p.y,2,0,Math.PI*2)
+ctx.fillStyle="#888"
+ctx.fill()
+})
+
+for(let i=0;i<particles.length;i++){
+for(let j=i;j<particles.length;j++){
+let dx=particles[i].x-particles[j].x
+let dy=particles[i].y-particles[j].y
+let dist=Math.sqrt(dx*dx+dy*dy)
+
+if(dist<120){
+ctx.beginPath()
+ctx.moveTo(particles[i].x,particles[i].y)
+ctx.lineTo(particles[j].x,particles[j].y)
+ctx.strokeStyle="rgba(150,150,255,"+(1-dist/120)+")"
+ctx.stroke()
+}
+}
+}
+
+requestAnimationFrame(draw)
+}
+
+draw()
+
+window.addEventListener("resize",()=>{
+canvas.width=window.innerWidth
+canvas.height=window.innerHeight
+})
+</script>
+
+</body>
+</html>
