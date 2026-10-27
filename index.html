@@ -1,207 +1,327 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Abhilash Praharaj</title>
-
-<link rel="stylesheet" href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css"/>
-
-<style>
-*{box-sizing:border-box;margin:0;padding:0;font-family:Arial,Helvetica,sans-serif}
-body{background:#0b0b0f;color:#e6e6e6;overflow-x:hidden}
-canvas{position:fixed;top:0;left:0;z-index:-1}
-.container{max-width:1000px;margin:auto;padding:40px 20px}
-.hero{min-height:80vh;display:flex;flex-direction:column;justify-content:center}
-h1{font-size:48px;margin-bottom:10px}
-.subtitle{font-size:20px;color:#8f8f9a;margin-bottom:15px}
-.tagline{font-size:18px;margin-bottom:30px}
-.buttons a{display:inline-block;margin-right:15px;padding:10px 20px;border-radius:6px;text-decoration:none;background:#ffffff10;color:white;border:1px solid #ffffff20}
-section{margin-top:80px}
-section h2{font-size:28px;margin-bottom:20px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
-.card{background:#14141c;border:1px solid #2a2a35;padding:20px;border-radius:10px;transition:.3s}
-.card:hover{transform:translateY(-5px);border-color:#444}
-.skills span{display:inline-block;margin:5px;padding:6px 10px;background:#1d1d26;border-radius:6px;font-size:14px}
-footer{margin-top:80px;padding:30px;text-align:center;color:#777}
-.profile{width:120px;height:120px;border-radius:50%;object-fit:cover;margin-bottom:20px}
-
-.github-calendar{
-background:#14141c;
-padding:20px;
-border-radius:10px;
-border:1px solid #2a2a35;
-}
-</style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Abhilash Praharaj — AI/LLM Engineer</title>
+<meta name="description" content="Abhilash Praharaj builds LLM agents and RAG systems. CS undergrad at Silicon University and BS Data Science at IIT Madras. Open to AI internships.">
+<meta name="color-scheme" content="dark">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Geist+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script>document.documentElement.classList.add('js')</script>
 </head>
-
 <body>
 
-<canvas id="bg"></canvas>
+<a class="skip" href="#projects">Skip to projects</a>
 
-<div class="container hero">
-<img src="ok.jpeg" alt="Profile Picture" class="profile" />
-<h1>Abhilash Praharaj</h1>
-<div class="subtitle">Token Wrangler | Backend & LLM Engineer</div>
-<div class="tagline">Let's get this code running.</div>
-<div class="buttons">
-<a href="#projects">Projects</a>
-<a href="#skills">Skills</a>
-<a href="#github">GitHub</a>
-<a href="#contact">Contact</a>
-</div>
-</div>
+<main id="main">
 
-<div class="container">
+<!-- 01 HELLO -->
+<section id="hello" class="sec" data-tape="Hello">
+  <div class="frame">
+    <span class="rule" aria-hidden="true"></span>
+    <div class="hud"><p><span class="hud-n">01</span><span class="hud-s">/</span>Hello</p><p class="hud-r">Greetings, traveller</p></div>
 
-<section id="about">
-<h2>About</h2>
-<p>
-B.Tech student at Silicon University and BS in Data Science student at IIT Madras. I focus on backend systems and modern AI tooling, particularly large language models, LangChain, and scalable API architectures. I enjoy building practical systems that combine software engineering with intelligent automation.
-</p>
+    <div class="hero">
+      <div class="hero-copy">
+        <h1 class="display" data-reveal>Abhilash Praharaj.<br>I make LLMs <span class="accent">behave</span>.</h1>
+        <p class="lede" data-reveal>Making science fun by day, IIT Madras data science student by night.</p>
+        <div class="actions" data-reveal>
+          <a class="btn btn-solid" href="#projects">
+            <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M8 2v11M3 8.5 8 13.5l5-5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+            See the projects
+          </a>
+          <a class="btn" href="resume.pdf" download="Abhilash_Praharaj_Resume.pdf">Résumé</a>
+          <a class="btn" href="https://github.com/abhilash404" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path fill="currentColor" d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.39-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg>
+            GitHub
+          </a>
+        </div>
+        <p class="micro" data-reveal>Open to internships · the AI kind</p>
+      </div>
+
+      <figure class="gif" data-reveal>
+        <button class="gif-stage" id="gif-btn" type="button" aria-label="Show the next parrot">
+          <img id="gif-img" src="gifs/parrot.gif" alt="A dancing parrot" width="401" height="498">
+        </button>
+        <figcaption class="gif-cap">
+          <span id="gif-text" aria-live="polite">Default mode: vibing.</span>
+          <span class="gif-count"><span id="gif-n">1</span> / 6 · click the parrot</span>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
 </section>
 
-<section id="projects">
-<h2>Projects</h2>
-<div class="grid">
+<!-- 02 PROJECTS -->
+<section id="projects" class="sec" data-tape="Projects">
+  <div class="frame">
+    <span class="rule" aria-hidden="true"></span>
+    <div class="hud"><p><span class="hud-n">02</span><span class="hud-s">/</span>Projects</p><p class="hud-r">Things that compile (mostly)</p></div>
+    <h2 class="sr-only">Projects</h2>
 
-<div class="card">
-<h3>Nota – Intelligent File Deduplicator</h3>
-<p>Rust CLI tool for detecting duplicate files with multithreaded scanning, quarantine-based deletion, and JSON reporting.</p>
-</div>
+    <div class="cards">
+      <!-- Surgical-RAG, featured -->
+      <article class="card card-wide" data-reveal>
+        <div class="card-top"><span class="chip-n" style="--c:#E4572E">01</span><span>Research · RAG</span></div>
+        <div class="shot" data-ui>
+          <div class="claims" aria-hidden="true">
+            <p class="c1"><span class="ok">Supported</span>The Eiffel Tower was completed in 1889.</p>
+            <p class="c2"><span class="ok">Supported</span>It was built for the World's Fair.</p>
+            <p class="c3"><span class="bad">Unsupported</span><em>It stands 450 metres tall.</em></p>
+            <p class="c4"><span class="mend">Repaired</span>It stands about 330 metres tall.</p>
+          </div>
+          <div class="big-stat"><b>28.2%</b><span>fewer tokens than<br>standard RAG</span></div>
+        </div>
+        <span class="tile tile-float" style="--c:#E4572E" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M9 37 31 15l4 4-22 22H9Z" fill="#fff"/><path d="m31 15 5-5c2 0 4 2 4 4l-5 5Z" fill="#1B1C1F"/><path d="M14 33l3 3" stroke="#E4572E" stroke-width="2"/></svg></span>
+        <div class="card-body">
+          <h3 class="card-h">Surgical-<span style="color:#FF7A57">RAG</span></h3>
+          <p>When an LLM lies, don't rewrite the whole answer. Operate on the lie. It checks every claim with an NLI model and regenerates only the broken ones. Got a research paper out of it.</p>
+          <ul class="pills"><li class="pill-on">Paper</li><li>Llama 3.3 70B</li><li>DeBERTa-v3</li><li>FAISS</li></ul>
+          <a class="card-link" href="https://github.com/abhilash404/surgical-rag" target="_blank" rel="noopener">Open repo <span aria-hidden="true">↗</span></a>
+        </div>
+      </article>
 
-<div class="card">
-<h3>Park With Us</h3>
-<p>Parking management system with role-based dashboards, Redis caching, and Celery background tasks.</p>
-</div>
+      <!-- Deploy agent -->
+      <article class="card" data-reveal>
+        <div class="card-top"><span class="chip-n" style="--c:#2F6BFF">02</span><span>Agent</span></div>
+        <div class="shot" data-ui>
+          <div class="term">
+            <p><span class="t-dim">00:00</span> POST /task</p>
+            <p><span class="t-dim">00:41</span> llm.write_app()</p>
+            <p><span class="t-dim">01:02</span> github.push()</p>
+            <p><span class="t-dim">02:37</span> <span class="t-ok">pages live</span></p>
+            <p><span class="t-dim">04:12</span> <span class="t-acc">round 2: revising</span></p>
+          </div>
+        </div>
+        <span class="tile tile-float" style="--c:#2F6BFF" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M24 7c6 5 9 12 9 20l-4 6H19l-4-6c0-8 3-15 9-20Z" fill="#fff"/><circle cx="24" cy="21" r="3.6" fill="#2F6BFF"/><path d="M19 33l-5 6 6-2M29 33l5 6-6-2" fill="#fff"/><path d="M22 36h4l-2 6Z" fill="#FFC53D"/></svg></span>
+        <div class="card-body">
+          <h3 class="card-h">Deploy <span style="color:#6E9BFF">Agent</span></h3>
+          <p>Give it a brief, get a live website on GitHub Pages. Under ten minutes, zero human clicks.</p>
+          <ul class="pills"><li class="pill-on">Shipped</li><li>FastAPI</li><li>Groq</li></ul>
+          <a class="card-link" href="https://github.com/abhilash404/code-deployment-agent" target="_blank" rel="noopener">Open repo <span aria-hidden="true">↗</span></a>
+        </div>
+      </article>
 
-<div class="card">
-<h3>Crabby Interpreter</h3>
-<p>Lightweight programming language interpreter written in Rust implementing tokenization, parsing, and execution.</p>
-</div>
+      <!-- Timetable -->
+      <article class="card" data-reveal>
+        <div class="card-top"><span class="chip-n" style="--c:#1FA77A">03</span><span>Constraint solving</span></div>
+        <div class="shot" data-ui>
+          <div class="tt" aria-hidden="true">
+            <span></span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span>
+            <span>9:00</span><b class="g">DBMS</b><b class="b">OS</b><b class="g">DBMS</b><b class="y">ML</b><b class="b">OS</b>
+            <span>10:00</span><b class="b">OS</b><b class="p">Elec</b><b class="o">Math</b><b class="y">ML</b><b class="g">DBMS</b>
+            <span>11:00</span><b class="o">Math</b><b class="g">DBMS</b><b class="p">Elec</b><b class="o">Math</b><i></i>
+          </div>
+        </div>
+        <span class="tile tile-float" style="--c:#1FA77A" aria-hidden="true"><svg viewBox="0 0 48 48"><rect x="9" y="11" width="30" height="27" rx="3" fill="#fff"/><rect x="9" y="11" width="30" height="7" rx="3" fill="#0E6B4E"/><g fill="#1FA77A"><rect x="13" y="22" width="6" height="5"/><rect x="21" y="22" width="6" height="5" opacity=".45"/><rect x="29" y="22" width="6" height="5"/><rect x="13" y="29" width="6" height="5" opacity=".45"/><rect x="21" y="29" width="6" height="5"/><rect x="29" y="29" width="6" height="5" opacity=".45"/></g></svg></span>
+        <div class="card-body">
+          <h3 class="card-h">Time<span style="color:#3BD69F">table</span></h3>
+          <p>An NP-hard problem, a CP-SAT solver, and a college full of teachers who all want Monday off.</p>
+          <ul class="pills"><li class="pill-on">Microservice</li><li>OR-Tools</li><li>Celery</li></ul>
+          <a class="card-link" href="https://github.com/abhilash404/time-table-scheduler" target="_blank" rel="noopener">Open repo <span aria-hidden="true">↗</span></a>
+        </div>
+      </article>
 
-<div class="card">
-<h3>Placement Portal</h3>
-<p>Role-based recruitment platform for institutes, companies, and students with async jobs and analytics.</p>
-</div>
+      <!-- Cinema -->
+      <article class="card" data-reveal>
+        <div class="card-top"><span class="chip-n" style="--c:#F2B705">04</span><span>Forecasting</span></div>
+        <div class="shot" data-ui>
+          <svg class="chart" viewBox="0 0 320 170" role="img" aria-label="Forecast line tracking actual audience counts, peaking on weekends">
+            <g stroke="#26282D"><path d="M10 40H310M10 90H310M10 140H310"/></g>
+            <path d="M10 130 L40 122 L70 86 L100 50 L130 118 L160 128 L190 116 L220 78 L250 38 L280 108 L310 96" fill="none" stroke="#6B6E76" stroke-width="2"/>
+            <path d="M10 126 L40 118 L70 90 L100 56 L130 112 L160 124 L190 112 L220 82 L250 46 L280 102 L310 92" fill="none" stroke="#F2B705" stroke-width="2.6"/>
+          </svg>
+        </div>
+        <span class="tile tile-float" style="--c:#F2B705" aria-hidden="true"><svg viewBox="0 0 48 48"><rect x="8" y="19" width="32" height="20" rx="2" fill="#1B1C1F"/><path d="m8 12 30-5 1.2 6.6-30 5Z" fill="#1B1C1F"/><path d="m14 11 5 6.6M22 9.6l5 6.6M30 8.3l5 6.6" stroke="#F2B705" stroke-width="2.4"/><path d="M13 33l6-5 5 3 9-8" fill="none" stroke="#F2B705" stroke-width="2.4"/></svg></span>
+        <div class="card-body">
+          <h3 class="card-h">Box <span style="color:#FFD24D">Office</span></h3>
+          <p>Predicts how many people show up to the movies. Spoiler: weekends.</p>
+          <ul class="pills"><li class="pill-on">Model</li><li>XGBoost</li><li>LightGBM</li></ul>
+          <a class="card-link" href="mailto:abhilashpraharaj122@gmail.com?subject=Box%20Office%20notebook">Ask for the notebook <span aria-hidden="true">↗</span></a>
+        </div>
+      </article>
 
-<div class="card">
-<h3>LLM Code Deployment</h3>
-<p>Automated system that generates applications with LLMs, deploys to GitHub Pages, and evaluates results.</p>
-</div>
+      <!-- Nota -->
+      <article class="card" data-reveal>
+        <div class="card-top"><span class="chip-n" style="--c:#13A4C4">05</span><span>Rust CLI</span></div>
+        <div class="shot" data-ui>
+          <div class="term">
+            <p><span class="t-acc">$</span> nota same ~/Downloads</p>
+            <p>found <span class="t-str">38</span> duplicate groups</p>
+            <p>quarantined <span class="t-str">61</span> files</p>
+            <p><span class="t-acc">$</span> nota restore 12</p>
+            <p><span class="t-ok">restored</span> IMG_2041.jpg</p>
+          </div>
+        </div>
+        <span class="tile tile-float" style="--c:#13A4C4" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M12 9h14l7 7v20H12Z" fill="#fff" opacity=".55"/><path d="M17 14h14l7 7v20H17Z" fill="#fff"/><path d="M31 14v7h7" fill="#BDEBF5"/><path d="m22 31 4 4 7-8" fill="none" stroke="#13A4C4" stroke-width="2.6"/></svg></span>
+        <div class="card-body">
+          <h3 class="card-h">No<span style="color:#4CCBE6">ta</span></h3>
+          <p>Finds duplicate files and quarantines them instead of deleting. Trust issues, but in Rust.</p>
+          <ul class="pills"><li class="pill-on">CLI</li><li>Rust</li><li>Rayon</li></ul>
+          <a class="card-link" href="https://github.com/abhilash404/Nota" target="_blank" rel="noopener">Open repo <span aria-hidden="true">↗</span></a>
+        </div>
+      </article>
 
-<div class="card">
-<h3>LLM Analysis Quiz Solver</h3>
-<p>Agent capable of scraping, processing data, and solving analysis tasks automatically using LLM pipelines.</p>
-</div>
+      <!-- MCboss -->
+      <article class="card" data-reveal>
+        <div class="card-top"><span class="chip-n" style="--c:#E2458E">06</span><span>Game AI · cooking</span></div>
+        <div class="shot" data-ui>
+          <div class="term react">
+            <p><b>Thought</b> Player is low. Go in.</p>
+            <p><b>Action</b> charge(player)</p>
+            <p><b>Observe</b> Shield up. 0 dmg.</p>
+            <p><b>Action</b> summon_minions(3)</p>
+          </div>
+        </div>
+        <span class="tile tile-float" style="--c:#E2458E" aria-hidden="true"><svg viewBox="0 0 48 48"><rect x="11" y="11" width="26" height="26" fill="#1B1C1F"/><rect x="15" y="17" width="6" height="6" fill="#fff"/><rect x="27" y="17" width="6" height="6" fill="#fff"/><rect x="21" y="25" width="6" height="4" fill="#E2458E"/><rect x="18" y="29" width="12" height="4" fill="#E2458E"/></svg></span>
+        <div class="card-body">
+          <h3 class="card-h">MC<span style="color:#FF6FAE">boss</span></h3>
+          <p>A Minecraft boss that thinks before it hits you. ReAct loop, because peace was never an option.</p>
+          <ul class="pills"><li class="pill-on">Building</li><li>Java</li><li>ReAct</li></ul>
+          <a class="card-link" href="https://github.com/abhilash404/MCboss" target="_blank" rel="noopener">Open repo <span aria-hidden="true">↗</span></a>
+        </div>
+      </article>
 
-</div>
+      <!-- More -->
+      <div class="card more" data-reveal>
+        <h3 class="more-h">More on <span class="accent">GitHub</span>.</h3>
+        <p class="more-p">Side quests, each built to learn one thing properly.</p>
+        <ul class="more-list">
+          <li><a href="https://github.com/abhilash404/regression" target="_blank" rel="noopener">regression <span>no sklearn, pure pain</span></a></li>
+          <li><a href="https://github.com/abhilash404/command-line-interface" target="_blank" rel="noopener">rust todo cli <span>Rust</span></a></li>
+          <li><a href="https://github.com/abhilash404/Naag" target="_blank" rel="noopener">Naag <span>Rust</span></a></li>
+          <li><a href="https://github.com/abhilash404/tele-bot" target="_blank" rel="noopener">tele-bot <span>Python</span></a></li>
+          <li><a href="https://github.com/abhilash404/vue-app" target="_blank" rel="noopener">vue-app <span>Vue</span></a></li>
+          <li><a href="https://github.com/abhilash404/amazon-project" target="_blank" rel="noopener">amazon-project <span>vanilla JS</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
 </section>
 
-<section id="skills">
-<h2>Skills</h2>
-<div class="skills">
-<span>Python</span>
-<span>Rust</span>
-<span>Flask</span>
-<span>FastAPI</span>
-<span>Axum</span>
-<span>PyTorch</span>
-<span>TensorFlow</span>
-<span>Scikit-learn</span>
-<span>LangChain</span>
-<span>LangGraph</span>
-<span>HTML</span>
-<span>CSS</span>
-<span>JavaScript</span>
-</div>
+<!-- 03 EXPERIENCE -->
+<section id="experience" class="sec" data-tape="Experience">
+  <div class="frame">
+    <span class="rule" aria-hidden="true"></span>
+    <div class="hud"><p><span class="hud-n">03</span><span class="hud-s">/</span>Experience</p><p class="hud-r">Real jobs, real deadlines</p></div>
+
+    <div class="xp">
+      <h2 class="h2" data-reveal>Paid to <span class="accent">ship</span>.</h2>
+      <div class="xp-rows">
+        <article class="xp-row" data-reveal>
+          <div>
+            <h3 class="xp-h">Education Intern</h3>
+            <p class="xp-org">Jigyasu · May 2026 – now</p>
+          </div>
+          <p class="xp-what">Hired to design learning content around Jigyasu's science experiments. Then wandered into the tech side: I'm building their website, their internal ERP, and an AI agent that writes the experiment content. Automating my own job, responsibly.</p>
+        </article>
+        <article class="xp-row" data-reveal>
+          <div>
+            <h3 class="xp-h">Business Analyst Intern</h3>
+            <p class="xp-org">HomeEasy.com · Jan – Feb 2026</p>
+          </div>
+          <p class="xp-what">Automated the finance team's data entry. The sheets now fill themselves every night at 12:01 AM, then feed Power BI dashboards.</p>
+        </article>
+        <article class="xp-row" data-reveal>
+          <div>
+            <h3 class="xp-h">Community Manager</h3>
+            <p class="xp-org">Bloomgen · 2023 – 2024</p>
+          </div>
+          <p class="xp-what">Grew and herded an online community. Events, moderation, and turning member chatter into product feedback.</p>
+        </article>
+      </div>
+    </div>
+  </div>
 </section>
 
-<section id="github">
-<h2>GitHub Activity</h2>
-<div class="github-calendar">
-Loading GitHub activity...
-</div>
+<!-- 04 EDUCATION -->
+<section id="education" class="sec" data-tape="Education">
+  <div class="frame">
+    <span class="rule" aria-hidden="true"></span>
+    <div class="hud"><p><span class="hud-n">04</span><span class="hud-s">/</span>Education</p><p class="hud-r">Two degrees, one sleep schedule</p></div>
+
+    <div class="edu-wrap">
+      <h2 class="h2" data-reveal>Two degrees.<br><span class="accent">At once.</span></h2>
+      <p class="lede" data-reveal>No, I am not fine. Aspiring AI professor who should really be studying for GATE.</p>
+      <div class="edu">
+        <article data-reveal>
+          <p class="edu-yr">2023 – 2027</p>
+          <h3>B.Tech, Computer Science</h3>
+          <p>Silicon University, Bhubaneswar</p>
+        </article>
+        <article data-reveal>
+          <p class="edu-yr">2023 – 2027</p>
+          <h3>BS, Data Science</h3>
+          <p>IIT Madras</p>
+        </article>
+      </div>
+      <p class="edu-school" data-reveal>Before that: Class 12 at Guidance English Medium School, Bhubaneswar (2022) and Class 10 at Modern School, Nagpur (2020).</p>
+    </div>
+  </div>
 </section>
 
-<section id="contact">
-<h2>Contact</h2>
-<p>Email: abhilashpraharaj122@gmail.com</p>
-<p>GitHub: https://github.com/abhilash404</p>
+<!-- 05 STACK -->
+<section id="stack" class="sec" data-tape="Stack">
+  <div class="frame">
+    <span class="rule" aria-hidden="true"></span>
+    <div class="hud"><p><span class="hud-n">05</span><span class="hud-s">/</span>Stack</p><p class="hud-r">Stuff I reach for</p></div>
+
+    <div class="stack">
+      <h2 class="h2" data-reveal>The <span class="accent">toolkit</span>.</h2>
+      <div class="stack-grid">
+        <div data-reveal><h3>AI / ML</h3><ul class="chips"><li>LLMs</li><li>RAG</li><li>Agents</li><li>PyTorch</li><li>Transformers</li><li>scikit-learn</li><li>Groq</li><li>Gemini</li></ul></div>
+        <div data-reveal><h3>Backend</h3><ul class="chips"><li>FastAPI</li><li>Flask</li><li>Pydantic</li><li>Celery</li><li>LangChain</li><li>OR-Tools</li></ul></div>
+        <div data-reveal><h3>Languages</h3><ul class="chips"><li>Python</li><li>Rust</li><li>JavaScript</li><li>SQL</li><li>Java</li></ul></div>
+        <div data-reveal><h3>Data / infra</h3><ul class="chips"><li>PostgreSQL</li><li>Redis</li><li>FAISS</li><li>GCP</li><li>Linux</li><li>Git</li></ul></div>
+      </div>
+    </div>
+  </div>
 </section>
 
-</div>
+<!-- 06 CONTACT -->
+<section id="contact" class="sec" data-tape="Contact">
+  <div class="frame">
+    <span class="rule" aria-hidden="true"></span>
+    <div class="hud"><p><span class="hud-n">06</span><span class="hud-s">/</span>Contact</p><p class="hud-r">Replies faster than my models</p></div>
 
-<footer>
-© 2026 Abhilash Praharaj
+    <div class="contact">
+      <h2 class="display contact-h" data-reveal>Let's build<br>something <span class="accent">real</span>.</h2>
+      <p class="lede" data-reveal>Hiring for AI? I'm one email away.</p>
+      <div class="actions" data-reveal>
+        <a class="btn btn-solid btn-mail" href="mailto:abhilashpraharaj122@gmail.com?subject=Hello%20Abhilash">abhilashpraharaj122@gmail.com</a>
+        <a class="btn" href="https://www.linkedin.com/in/abhilash-praharaj-798221243/" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn" href="https://github.com/abhilash404" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn" href="https://discord.com/users/1138740362161164349" target="_blank" rel="noopener">Discord</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="frame foot-frame">
+    <p class="foot-name" aria-hidden="true">PRAHARAJ</p>
+    <div class="foot-row"><p>© 2026 Abhilash Praharaj</p><p>Parrots: cultofthepartyparrot.com</p><a href="#hello">Back to top ↑</a></div>
+  </div>
 </footer>
 
-<script src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"></script>
+<!-- The measuring tape -->
+<aside class="rail" id="rail" aria-label="Page position">
+  <div class="rail-track" id="rail-track" role="slider" tabindex="0" aria-label="Scroll through the page" aria-orientation="vertical" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-valuetext="Hello, 0 percent">
+    <div class="rail-strip" id="rail-strip"></div>
+    <div class="rail-map" id="rail-map" aria-hidden="true"><div class="rail-window" id="rail-window"></div></div>
+    <div class="rail-needle" id="rail-needle" aria-hidden="true">
+      <span class="rail-read" id="rail-read"><span class="dg"><span class="dg-col"></span></span><span class="dg"><span class="dg-col"></span></span><span class="dg"><span class="dg-col"></span></span>%</span>
+    </div>
+  </div>
+</aside>
+<div class="dock dock-top" id="dock-top"></div>
+<div class="dock dock-bottom" id="dock-bottom"></div>
 
-<script>
-GitHubCalendar(".github-calendar", "abhilash404", {
-responsive: true
-});
-</script>
-
-<script>
-const canvas=document.getElementById("bg")
-const ctx=canvas.getContext("2d")
-canvas.width=window.innerWidth
-canvas.height=window.innerHeight
-
-let particles=[]
-
-for(let i=0;i<80;i++){
-particles.push({
-x:Math.random()*canvas.width,
-y:Math.random()*canvas.height,
-vx:(Math.random()-0.5)*0.5,
-vy:(Math.random()-0.5)*0.5
-})}
-
-function draw(){
-ctx.clearRect(0,0,canvas.width,canvas.height)
-
-particles.forEach(p=>{
-p.x+=p.vx
-p.y+=p.vy
-
-if(p.x<0||p.x>canvas.width)p.vx*=-1
-if(p.y<0||p.y>canvas.height)p.vy*=-1
-
-ctx.beginPath()
-ctx.arc(p.x,p.y,2,0,Math.PI*2)
-ctx.fillStyle="#888"
-ctx.fill()
-})
-
-for(let i=0;i<particles.length;i++){
-for(let j=i;j<particles.length;j++){
-let dx=particles[i].x-particles[j].x
-let dy=particles[i].y-particles[j].y
-let dist=Math.sqrt(dx*dx+dy*dy)
-
-if(dist<120){
-ctx.beginPath()
-ctx.moveTo(particles[i].x,particles[i].y)
-ctx.lineTo(particles[j].x,particles[j].y)
-ctx.strokeStyle="rgba(150,150,255,"+(1-dist/120)+")"
-ctx.stroke()
-}
-}
-}
-
-requestAnimationFrame(draw)
-}
-
-draw()
-
-window.addEventListener("resize",()=>{
-canvas.width=window.innerWidth
-canvas.height=window.innerHeight
-})
-</script>
-
+<script src="main.js"></script>
 </body>
 </html>
